@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\yosss\\OneDrive\\Desktop\\ColorGenerator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A84862DB-8CD1-40EA-9571-3FC989761E9E}|ColorGenerator\\ColorGenerator.csproj|c:\\users\\yosss\\onedrive\\desktop\\colorgenerator\\colorgenerator\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A84862DB-8CD1-40EA-9571-3FC989761E9E}|ColorGenerator\\ColorGenerator.csproj|solutionrelative:colorgenerator\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A84862DB-8CD1-40EA-9571-3FC989761E9E}|ColorGenerator\\ColorGenerator.csproj|c:\\users\\yosss\\onedrive\\desktop\\colorgenerator\\colorgenerator\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A84862DB-8CD1-40EA-9571-3FC989761E9E}|ColorGenerator\\ColorGenerator.csproj|solutionrelative:colorgenerator\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\yosss\\OneDrive\\Desktop\\ColorGenerator\\ColorGenerator\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "ColorGenerator\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\yosss\\OneDrive\\Desktop\\ColorGenerator\\ColorGenerator\\MainPage.xaml.cs",
+              "RelativeToolTip": "ColorGenerator\\MainPage.xaml.cs",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAmwJgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T07:10:30.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\yosss\\OneDrive\\Desktop\\ColorGenerator\\ColorGenerator\\MainPage.xaml",
+              "RelativeDocumentMoniker": "ColorGenerator\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\yosss\\OneDrive\\Desktop\\ColorGenerator\\ColorGenerator\\MainPage.xaml",
+              "RelativeToolTip": "ColorGenerator\\MainPage.xaml",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAAAEoBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T07:09:56.001Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

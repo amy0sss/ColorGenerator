@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ColorGenerator.MainPage"
+             BackgroundImageSource="bg.jfif">
+
+    <!--Creating resources that can be called in the slider like a variable-->
+    <ContentPage.Resources>
+        <Color x:Key="Primary">#0000FF</Color>
+        <Color x:Key="Secondary">#0088FF</Color>
+        <Color x:Key="Tertiary">#347C98</Color>
+    </ContentPage.Resources>
+
+    <!--Putting a grid layout named as a Container 
+        BackgroundColor="#262521"-->
+    <Grid>
+
+        <!--Putting a VerticalStackLayout-->
+        <VerticalStackLayout Margin="10,0,10,0"
+                             Spacing="20">
+
+            <!--Putting a header-->
+            <VerticalStackLayout 
+                Margin="0,30,0,0"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+
+                <!--Creating a Frame for the image to be rounded-->
+                <Frame HeightRequest="120"
+                       WidthRequest="120"
+                       CornerRadius="60"
+                       BorderColor="Transparent">
+
+                    <Image Source="logo.jpg"
+                           HeightRequest="120"
+                           WidthRequest="120"
+                           Aspect="AspectFit"/>
+                </Frame>
+                <!--Putting Labels-->
+                <Label
+                    Text="HEX CODE GENERATOR"
+                    FontAttributes="Bold"
+                    FontSize="40"
+                    TextColor="Black"/>
+
+                <Label
+                    Text="by: Lastimosa, Julius Jr. C."
+                    FontAttributes="Italic"
+                    FontSize="22"
+                    TextColor="Black"
+                    HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <!--Creating a Frame wherein users can see the color that they set-->
+            <Frame x:Name="Container" BackgroundColor="Black" BorderColor="Transparent"
+                   HeightRequest="670" Margin="15,30,15,15" VerticalOptions="Center"
+                   CornerRadius="28">
+
+                <VerticalStackLayout VerticalOptions="Start" Spacing="35" Margin="0,15,0,0">
+
+                    <!--Creating a Frame for Preset Colors-->
+                    <Frame HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,0" 
+                           BorderColor="#00FFFF" CornerRadius="24" WidthRequest="480"
+                           BackgroundColor="White">
+                        <VerticalStackLayout>
+                            <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="6" Padding="4">
+                                <Label Text="PRESET COLORS:"
+                                       FontSize="22"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"/>
+
+                                <Button x:Name="Red_Button"
+                                        Text="Red"
+                                        HeightRequest="50"
+                                        WidthRequest="50"
+                                        CornerRadius="25"
+                                        TextColor="Transparent"
+                                        BackgroundColor="Red"
+                                        Clicked="Color_Button_Clicked"
+                                        BorderColor="#00FFFF"
+                                        BorderWidth="1.2"
+                                        />
+
+                                <Button x:Name="Green_Button"
+                                        Text="Green"
+                                        HeightRequest="50"
+                                        WidthRequest="50"
+                                        CornerRadius="25"
+                                        TextColor="Transparent"
+                                        BackgroundColor="Green"
+                                        Clicked="Color_Button_Clicked"
+                                        BorderColor="#00FFFF"
+                                        BorderWidth="1.2"/>
+
+                                <Button x:Name="Blue_Button"
+                                        Text="Blue"
+                                        HeightRequest="50"
+                                        WidthRequest="50"
+                                        CornerRadius="25"
+                                        TextColor="Transparent"
+                                        BackgroundColor="Blue"
+                                        Clicked="Color_Button_Clicked"
+                                        BorderColor="#00FFFF"
+                                        BorderWidth="1.2"/>
+
+                                <Button x:Name="Black_Button"
+                                        Text="Black"
+                                        HeightRequest="50"
+                                        WidthRequest="50"
+                                        CornerRadius="25"
+                                        TextColor="Transparent"
+                                        BackgroundColor="Black"
+                                        Clicked="Color_Button_Clicked"
+                                        BorderColor="#00FFFF"
+                                        BorderWidth="1.2"/>
+
+                                <Button x:Name="White_Button"
+                                        Text="White"
+                                        HeightRequest="50"
+                                        WidthRequest="50"
+                                        CornerRadius="25"
+                                        TextColor="Transparent"
+                                        BackgroundColor="White"
+                                        BorderColor="#00FFFF"
+                                        BorderWidth="1.2"
+                                        Clicked="Color_Button_Clicked"/>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <Frame BackgroundColor="#dddddd" Padding="15" BorderColor="Transparent" WidthRequest="460" CornerRadius="24" HorizontalOptions="Center">
+
+                        <VerticalStackLayout>
+                            
+                            <Label Text="Different Shades of the Color:"
+                                   FontSize="20"
+                                   TextColor="Black"
+                                   VerticalOptions="Center"/>
+                            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center" Padding="4" VerticalOptions="Center">
+                            
+                                <VerticalStackLayout Spacing="2">
+                                    <Frame
+                                        HeightRequest="80"
+                                        WidthRequest="80"
+                                        CornerRadius="20"
+                                        x:Name="FrameDisplay1"
+                                        BorderColor="Transparent"
+                                        BackgroundColor="Black"/>
+
+                                    <Label 
+                                        x:Name="lblHex1"
+                                        HorizontalTextAlignment="End"
+                                        Text="#000000"
+                                        FontSize="16"
+                                        VerticalOptions="End"
+                                        HorizontalOptions="Center"
+                                        TextColor="Black"/>
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Spacing="2">
+                                    <Frame
+                                        HeightRequest="80"
+                                        WidthRequest="80"
+                                        CornerRadius="20"
+                                        x:Name="FrameDisplay2"
+                                        BorderColor="Transparent"
+                                        BackgroundColor="Black"/>
+
+                                    <Label 
+                                        x:Name="lblHex2"
+                                        HorizontalTextAlignment="End"
+                                        Text="#000000"
+                                        FontSize="16"
+                                        VerticalOptions="End"
+                                        HorizontalOptions="Center"
+                                        TextColor="Black"/>
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Spacing="2">
+                                    <Frame
+                                        HeightRequest="80"
+                                        WidthRequest="80"
+                                        CornerRadius="20"
+                                        x:Name="FrameDisplay3"
+                                        BorderColor="Transparent"
+                                        BackgroundColor="Black"/>
+
+                                    <Label 
+                                        x:Name="lblHex3"
+                                        HorizontalTextAlignment="End"
+                                        Text="#000000"
+                                        FontSize="16"
+                                        VerticalOptions="End"
+                                        HorizontalOptions="Center"
+                                        TextColor="Black"/>
+                                </VerticalStackLayout>
+
+                                <VerticalStackLayout Spacing="2">
+                                    <Frame
+                                        HeightRequest="80"
+                                        WidthRequest="80"
+                                        CornerRadius="20"
+                                        x:Name="FrameDisplay4"
+                                        BorderColor="Transparent"
+                                        BackgroundColor="Black"/>
+
+                                    <Label 
+                                        x:Name="lblHex4"
+                                        HorizontalTextAlignment="End"
+                                        Text="#000000"
+                                        FontSize="16"
+                                        VerticalOptions="End"
+                                        HorizontalOptions="Center"
+                                        TextColor="Black"/>
+                                </VerticalStackLayout>
+                                
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Frame>
+
+                        <!--Creating a frame to save as a container for the user actions-->
+                    <Frame
+                        VerticalOptions="Center"
+                        BackgroundColor="#dddddd" BorderColor="Transparent" WidthRequest="460"
+                        CornerRadius="24">
+
+                        <!--Putting a VerticalStackLayout-->
+                        <VerticalStackLayout Spacing="15" Margin="0,10,0,10" VerticalOptions="Center">
+
+                            <!--For the red value-->
+                            <Label 
+                               x:Name ="lblRed"    
+                               Text="Red Value: 0"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="Red"/>
+
+                            <Slider
+                                x:Name="sldRed"
+                                MaximumTrackColor="Pink"
+                                MinimumTrackColor="Red"
+                                ThumbColor="Red"
+                                IsEnabled="False"
+                                />
+
+                            <!--For the Green value-->
+                            <Label 
+                               x:Name ="lblGreen" 
+                               Text="Green Value: 0"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="Green"/>
+
+                            <Slider
+                                x:Name="sldGreen"
+                                MaximumTrackColor="LightGreen"
+                                MinimumTrackColor="Green"
+                                ThumbColor="Green"
+                                IsEnabled="False"
+                                />
+
+                            <!--For the Blue value-->
+                            <Label 
+                               x:Name ="lblBlue"   
+                               Text="Blue Value: 0"
+                               FontSize="20"
+                               FontAttributes="Bold"
+                               TextColor="Blue"/>
+
+                            <Slider
+                                x:Name="sldBlue"
+                                MaximumTrackColor="{StaticResource Tertiary}"
+                                MinimumTrackColor="{StaticResource Secondary}"
+                                ThumbColor="Blue"
+                                IsEnabled="False"
+                            />
+
+                        </VerticalStackLayout>
+                    </Frame>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!--Putting a Frame to show the Hex Value and and Image-->
+            <Frame CornerRadius="24" Margin ="0,0,15,20"  VerticalOptions="Start" HorizontalOptions="Center" HeightRequest="85" 
+                       BorderColor="#00FFFF" BackgroundColor="#fbfcf8">
+
+                <!--Creating a HorizontalStackLayout so that the elements/controls are aligned horizontally-->
+                <HorizontalStackLayout Spacing="10" HeightRequest="45">
+
+                    <!--Putting Label-->
+                    <Label
+                                HorizontalTextAlignment="End"
+                                Text="Enter Hex Value:"
+                                FontSize="26"
+                                FontAttributes="Bold"
+                                VerticalOptions="Center"
+                                TextColor="Black"
+                                />
+
+                    <!--Creating an Entry for HexValue UserInpu-->
+                    <Entry
+                                x:Name="txtHex"
+                                MaxLength="7"
+                                MinimumHeightRequest="30"
+                                MaximumWidthRequest="140" 
+                                Placeholder="#000000"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Start"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Center"
+                                FontSize="26"
+                                TextColor="Black"
+                                />
+
+                </HorizontalStackLayout>
+            </Frame>
+            <!-- Creating a Button that can generate random colors -->
+            <Button
+                x:Name="btnGenerate"
+                BackgroundColor="Black"
+                Text="GENERATE COLOR"
+                TextColor="White"
+                BorderWidth="2"
+                FontAttributes="Bold"
+                Clicked="btnGenerate_Clicked" 
+                FontSize="33"
+                Padding="16"
+                CornerRadius="24"
+                Margin="10,0,10,20"/>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

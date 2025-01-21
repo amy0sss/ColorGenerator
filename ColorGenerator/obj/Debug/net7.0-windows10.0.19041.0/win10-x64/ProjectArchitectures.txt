@@ -1,0 +1,1 @@
+D:\Codes\ColorGenerator\ColorGenerator\ColorGenerator.csproj;x64
